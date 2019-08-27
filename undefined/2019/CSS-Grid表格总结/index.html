@@ -7,11 +7,9 @@
     <meta charset="utf-8">
     <meta name="keywords" content="[CSS]Grid表格总结, Comingdawn">
     <meta name="description" content="Css网格平常用到的时候还是蛮多的，并且十分的灵活的，但是我不太熟悉它的使用，而且总是忘记，所以在此稍微的记一下。
-#Grid
-##一、对网格容器进行设置
-###1.将HTML元素化为网格容器display: grid;
+Grid一、对网格容器进行设置1.将HTML元素化为网格容器display: grid;
 
-你还可以将网格中">
+你还可以将网格中的单元格也化成网">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -289,44 +287,44 @@
         <div class="card-content article-card-content">
             <div id="articleContent">
                 <p>Css网格平常用到的时候还是蛮多的，并且十分的灵活的，但是我不太熟悉它的使用，而且总是忘记，所以在此稍微的记一下。</p>
-<p>#Grid</p>
-<p>##一、对网格容器进行设置</p>
-<p>###1.将HTML元素化为网格容器<br><strong>display: grid;</strong></p>
+<h1 id="Grid"><a href="#Grid" class="headerlink" title="Grid"></a>Grid</h1><h2 id="一、对网格容器进行设置"><a href="#一、对网格容器进行设置" class="headerlink" title="一、对网格容器进行设置"></a>一、对网格容器进行设置</h2><h3 id="1-将HTML元素化为网格容器"><a href="#1-将HTML元素化为网格容器" class="headerlink" title="1.将HTML元素化为网格容器"></a>1.将HTML元素化为网格容器</h3><p><strong>display: grid;</strong></p>
 <blockquote>
-<p><br>你还可以将网格中的单元格也化成网格容器，形成网格中的网格。<br><br></p>
+<p>你还可以将网格中的单元格也化成网格容器，形成网格中的网格。<br></p>
 </blockquote>
-<p>###2.在网格中添加行或列</p>
-<p>grid-template-columns: 50px 100px auto 1fr<br>grid-template-rows:<br>向网格容器中添加列或者行,参数用来设置列的宽度或行的高度，参数的数量表示列或行的个数。</p>
+<h3 id="2-在网格中添加行或列"><a href="#2-在网格中添加行或列" class="headerlink" title="2.在网格中添加行或列"></a>2.在网格中添加行或列</h3><p>grid-template-columns: 50px 100px auto 1fr<br>grid-template-rows:<br>向网格容器中添加列或者行,参数用来设置列的宽度或行的高度，参数的数量表示列或行的个数。</p>
 <blockquote>
-<p><br><br>fr：将列或行设置为可用空间的一小部分，<br>fr单位会将剩余空间平均分为多个部分，举个例子：<br><br><br><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">&lt;div id=”container”&gt;</span><br><span class="line">  &lt;div&gt;&lt;/div&gt;</span><br><span class="line">  &lt;div&gt;&lt;/div&gt;</span><br><span class="line">  &lt;div&gt;&lt;/div&gt;</span><br><span class="line">&lt;/div&gt;</span><br></pre></td></tr></table></figure></p>
+<p>fr：将列或行设置为可用空间的一小部分，<br>fr单位会将剩余空间平均分为多个部分，举个例子：</p>
 </blockquote>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">&lt;div id=”container”&gt;</span><br><span class="line">    &lt;div&gt;&lt;/div&gt;</span><br><span class="line">    &lt;div&gt;&lt;/div&gt;</span><br><span class="line">    &lt;div&gt;&lt;/div&gt;</span><br><span class="line">&lt;/div&gt;</span><br></pre></td></tr></table></figure>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">#container&#123;</span><br><span class="line">    Width: 100px;</span><br><span class="line">    Display: grid;</span><br><span class="line">    Grid-template-columns: 40px 1fr 2fr;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <blockquote>
-<p><br><br>第一列元素宽度为40px，剩下的60px，会被平均分为三份，每份20px，第二列占1份，20px，第三列占2份,40px。<br><br><br></p>
+<p>第一列元素宽度为40px，剩下的60px，会被平均分为三份，每份20px，第二列占1份，20px，第三列占2份,40px。</p>
 </blockquote>
 <p>auto：自动将列或行设置为其内容的宽度或高度，<br>%：将列或行调整为其容器的百分比宽度。</p>
 <blockquote>
-<p><br><strong>repeat() 函数</strong><br>如果行数或列数过多，还可以用repeat() 函数来增加，例子：<br>grid-template-columns: repeat(2,20px 5rem) 50px;<br>即等同于:<br>grid-template-columns: 20px 5rem 20px 5rem 50px;</p>
-<p>使用repeat() 函数时可以使用auto-fill和minmax()来自动填充网格容器，形成灵活的布局：<br>grid-template-columns: repeat(auto-fill,minmax(60px 1fr));<br>网格容器的大小变化时，会同时拉伸单元格的大小，以适应网格容器大小，但是如果在minmax范围内可以塞下下一行的另一个单元格时，则不会拉伸。<br>例如：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">#container&#123;</span><br><span class="line">    Width: 100px;</span><br><span class="line">    Display: grid;</span><br><span class="line">    Grid-template-columns: repeat(auto-fill,minmax(40px 1fr);</span><br><span class="line">    grid-template-rows: 1fr 1fr;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p><strong>repeat() 函数</strong><br>如果行数或列数过多，还可以用repeat() 函数来增加，例子：<br>grid-template-columns: repeat(2,20px 5rem) 50px;<br>即等同于:<br>grid-template-columns: 20px 5rem 20px 5rem 50px;</p>
+<p>使用repeat() 函数时可以使用auto-fill或auto-fit和minmax()来自动填充网格容器，形成灵活的布局：<br>（auto-fill和auto-fit的区别，这个细节笔者也没有弄太清楚，日后会继续补充）<br>grid-template-columns: repeat(auto-fill,minmax(60px 1fr));<br>网格容器的大小变化时，会同时拉伸单元格的大小，以适应网格容器大小，但是如果在minmax范围内可以塞下下一行的另一个单元格时，则不会拉伸。<br>例如：</p>
+</blockquote>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">#container&#123;</span><br><span class="line">    Width: 100px;</span><br><span class="line">    Display: grid;</span><br><span class="line">    Grid-template-columns: repeat(auto-fill,minmax(40px 1fr);</span><br><span class="line">    grid-template-rows: 1fr 1fr;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>当container的宽度为100px时，每一行将会有两个单元格并且每个单元格的宽度将会被拉伸至50px，而当container的宽度为120px,每一行将会有3个单元格，每一个宽度为40px。</p>
 </blockquote>
 <blockquote>
-<p><br>当container的宽度为100px时，每一行将会有两个单元格并且每个单元格的宽度将会被拉伸至50px，而当container的宽度为120px,每一行将会有3个单元格，每一个宽度为40px。<br><br><br>与此同时，你也可以用auto-fit来进行灵活的布局<br><br><br><br><br><br><strong>minmax() 函数</strong><br>当网格容器的大小产生变化，还可以用minmax() 函数来限制单元格的大小，类似于fr：<br>grid-template-columns: 100px minmax(50px, 1fr);<br><br></p>
+<p><strong>minmax() 函数</strong><br>当网格容器的大小产生变化，还可以用minmax() 函数来限制单元格的大小，类似于fr：<br>grid-template-columns: 100px minmax(50px, 1fr);</p>
 </blockquote>
-<p>###3.在单元格之间创建间隙<br>Grid-column-gap: 10px;<br>Grid-row-gap:<br>Grid-gap: 10px 20px;<br>设置网格行和列之间的间隙</p>
+<h3 id="3-在单元格之间创建间隙"><a href="#3-在单元格之间创建间隙" class="headerlink" title="3.在单元格之间创建间隙"></a>3.在单元格之间创建间隙</h3><p>Grid-column-gap: 10px;<br>Grid-row-gap:<br>Grid-gap: 10px 20px;<br>设置网格行和列之间的间隙</p>
 <p>Grid-gap 如果只有一个参数10px，则会将行和列的间隙都设置为10px，如果有两个参数10px 20px，则会将第一个参数设为行的间隙，第二个设为列的间隙。</p>
-<p>##二、对单元格进行设置</p>
-<p>###1.通过网格线改变单元格<br>Grid-column: 1/3;<br>Grid-row:</p>
+<h2 id="二、对单元格进行设置"><a href="#二、对单元格进行设置" class="headerlink" title="二、对单元格进行设置"></a>二、对单元格进行设置</h2><h3 id="1-通过网格线改变单元格"><a href="#1-通过网格线改变单元格" class="headerlink" title="1.通过网格线改变单元格"></a>1.通过网格线改变单元格</h3><p>Grid-column: 1/3;<br>Grid-row:</p>
 <blockquote>
-<p><br></p>
-<p>网格线：<br><img src="CSS-Grid表格总结/grid.png" alt="grid网格"><br><br></p>
+<p>网格线：<br><img src="grid.png" alt="grid网格"></p>
 </blockquote>
 <p>参数为从开始线到结束线，举个栗子：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">#items&#123;</span><br><span class="line">grid-column: 1/3;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
 <p>表示id为items的网格横跨第一条列线到第三条列线，占据两个网格。</p>
-<p>###2.对网格中的项目进行对齐<br>Justify-self: center;<br>Align-self: center;<br>Justify-self用于水平对齐，align-self用于垂直对齐。<br>默认情况下，此属性的值为stretch，这将使内容拉伸以填充单元格的整个宽度。此CSS Grid属性也接受其他值：<br>start：对齐单元格左侧，<br>center：对齐单元格中心，<br>end：对齐单元格右侧。</p>
+<h3 id="2-对网格中的项目进行对齐"><a href="#2-对网格中的项目进行对齐" class="headerlink" title="2.对网格中的项目进行对齐"></a>2.对网格中的项目进行对齐</h3><p>Justify-self: center;<br>Align-self: center;<br>Justify-self用于水平对齐，align-self用于垂直对齐。<br>默认情况下，此属性的值为stretch，这将使内容拉伸以填充单元格的整个宽度。此CSS Grid属性也接受其他值：<br>start：对齐单元格左侧，<br>center：对齐单元格中心，<br>end：对齐单元格右侧。</p>
 <blockquote>
-<p><br><strong>对网格容器中所有网格中的项目进行对齐（网格容器的属性）</strong><br>Justfy-items: center;        水平对齐<br>Align-items: stretch;        垂直对齐<br>可接受参数与上两项（网格项的对齐属性）完全相同。<br><br></p>
+<p><strong>对网格容器中所有网格中的项目进行对齐（网格容器的属性）</strong><br>Justfy-items: center;        水平对齐<br>Align-items: stretch;        垂直对齐<br>可接受参数与上两项（网格项的对齐属性）完全相同。</p>
 </blockquote>
-<p>###3.css网格区域<br>grid-template-areas用来合并网格形成区域并且命名。<br>grid-template-areas:<br>  “header header header”<br>  “advert content content”<br>  “footer footer footer”;<br>上面的代码将前三个单元格合并为一个区域header，将底部的三个单元格合并为一个footer区域，并在中间行中生成两个区域; advert和content。</p>
+<h3 id="3-css网格区域"><a href="#3-css网格区域" class="headerlink" title="3.css网格区域"></a>3.css网格区域</h3><p>grid-template-areas用来合并网格形成区域并且命名。<br>grid-template-areas:<br>  “header header header”<br>  “advert content content”<br>  “footer footer footer”;<br>上面的代码将前三个单元格合并为一个区域header，将底部的三个单元格合并为一个footer区域，并在中间行中生成两个区域; advert和content。</p>
 <blockquote>
 <p>. 表示空单元格</p>
 </blockquote>
@@ -504,11 +502,9 @@
                 </a>
                 <div class="card-content article-content">
                     <div class="summary">Css网格平常用到的时候还是蛮多的，并且十分的灵活的，但是我不太熟悉它的使用，而且总是忘记，所以在此稍微的记一下。
-#Grid
-##一、对网格容器进行设置
-###1.将HTML元素化为网格容器display: grid;
+Grid一、对网格容器进行设置1.将HTML元素化为网格容器display: grid;
 
-你还可以将网格中</div>
+你还可以将网格中的单元格也化成网</div>
                     <div class="publish-info">
                             <span class="publish-date">
                                 <i class="fa fa-clock-o fa-fw icon-date"></i>2019-08-12
