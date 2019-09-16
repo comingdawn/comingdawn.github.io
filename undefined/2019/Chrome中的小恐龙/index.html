@@ -5,11 +5,8 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="[CSS]Grid表格总结, Comingdawn">
-    <meta name="description" content="Css网格平常用到的时候还是蛮多的，并且十分的灵活的，但是我不太熟悉它的使用，而且总是忘记，所以在此稍微的记一下。
-Grid一、对网格容器进行设置1.将HTML元素化为网格容器display: grid;
-
-你还可以将网格中的单元格也化成网">
+    <meta name="keywords" content="Chrome中的小恐龙, Comingdawn">
+    <meta name="description" content="&amp;emsp;想必大家一定都遇到过下面这种情况:&amp;emsp;没错，这只像素小恐龙和下面的字非常清晰地告诉你一个残酷的事实：断网了。。。&amp;emsp;但是有意思的是，作者前些天断网时，一时手欠点了一下空格键。。。&amp;emsp;然后。。。。它跑起来了">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -17,7 +14,7 @@ Grid一、对网格容器进行设置1.将HTML元素化为网格容器display: g
     <meta name="format-detection" content="telephone=no">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-    <title>[CSS]Grid表格总结 | Comingdawn</title>
+    <title>Chrome中的小恐龙 | Comingdawn</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/font-awesome.min.css">
@@ -251,13 +248,13 @@ Grid一、对网格容器进行设置1.将HTML元素化为网格容器display: g
 
 
 
-<div class="bg-cover post-cover" style="background-image: url('/medias/featureimages/15.jpg')">
+<div class="bg-cover post-cover" style="background-image: url('/medias/featureimages/1.jpg')">
     <div class="container">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
                     <div class="description center-align post-title">
-                        [CSS]Grid表格总结
+                        Chrome中的小恐龙
                     </div>
                 </div>
             </div>
@@ -279,58 +276,16 @@ Grid一、对网格容器进行设置1.将HTML元素化为网格容器display: g
                 
 
                 <span class="post-date">
-                    <i class="fa fa-clock-o fa-fw"></i>2019-08-12
+                    <i class="fa fa-clock-o fa-fw"></i>2019-09-16
                 </span>
             </div>
         </div>
         <hr>
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <p>Css网格平常用到的时候还是蛮多的，并且十分的灵活的，但是我不太熟悉它的使用，而且总是忘记，所以在此稍微的记一下。</p>
-<h1 id="Grid"><a href="#Grid" class="headerlink" title="Grid"></a>Grid</h1><h2 id="一、对网格容器进行设置"><a href="#一、对网格容器进行设置" class="headerlink" title="一、对网格容器进行设置"></a>一、对网格容器进行设置</h2><h3 id="1-将HTML元素化为网格容器"><a href="#1-将HTML元素化为网格容器" class="headerlink" title="1.将HTML元素化为网格容器"></a>1.将HTML元素化为网格容器</h3><p><strong>display: grid;</strong></p>
-<blockquote>
-<p>你还可以将网格中的单元格也化成网格容器，形成网格中的网格。</p>
-</blockquote>
-<h3 id="2-在网格中添加行或列"><a href="#2-在网格中添加行或列" class="headerlink" title="2.在网格中添加行或列"></a>2.在网格中添加行或列</h3><p>grid-template-columns: 50px 100px auto 1fr<br>grid-template-rows:<br>向网格容器中添加列或者行,参数用来设置列的宽度或行的高度，参数的数量表示列或行的个数。</p>
-<blockquote>
-<p>fr：将列或行设置为可用空间的一小部分，<br>fr单位会将剩余空间平均分为多个部分，举个例子：</p>
-</blockquote>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">&lt;div id=&quot;container&quot;&gt;</span><br><span class="line">    &lt;div&gt;&lt;/div&gt;</span><br><span class="line">    &lt;div&gt;&lt;/div&gt;</span><br><span class="line">    &lt;div&gt;&lt;/div&gt;</span><br><span class="line">&lt;/div&gt;</span><br></pre></td></tr></table></figure>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">#container&#123;</span><br><span class="line">    Width: 100px;</span><br><span class="line">    Display: grid;</span><br><span class="line">    Grid-template-columns: 40px 1fr 2fr;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<blockquote>
-<p>第一列元素宽度为40px，剩下的60px，会被平均分为三份，每份20px，第二列占1份，20px，第三列占2份,40px。</p>
-</blockquote>
-<p>auto：自动将列或行设置为其内容的宽度或高度，<br>%：将列或行调整为其容器的百分比宽度。</p>
-<blockquote>
-<p><strong>repeat() 函数</strong><br>如果行数或列数过多，还可以用repeat() 函数来增加，例子：<br>grid-template-columns: repeat(2,20px 5rem) 50px;<br>即等同于:<br>grid-template-columns: 20px 5rem 20px 5rem 50px;</p>
-<p>使用repeat() 函数时可以使用auto-fill或auto-fit和minmax()来自动填充网格容器，形成灵活的布局：<br>（auto-fill和auto-fit的区别，这个细节笔者也没有弄太清楚，日后会继续补充）<br>grid-template-columns: repeat(auto-fill,minmax(60px 1fr));<br>网格容器的大小变化时，会同时拉伸单元格的大小，以适应网格容器大小，但是如果在minmax范围内可以塞下下一行的另一个单元格时，则不会拉伸。<br>例如：</p>
-</blockquote>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">#container&#123;</span><br><span class="line">    Width: 100px;</span><br><span class="line">    Display: grid;</span><br><span class="line">    Grid-template-columns: repeat(auto-fill,minmax(40px 1fr);</span><br><span class="line">    grid-template-rows: 1fr 1fr;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<blockquote>
-<p>当container的宽度为100px时，每一行将会有两个单元格并且每个单元格的宽度将会被拉伸至50px，而当container的宽度为120px,每一行将会有3个单元格，每一个宽度为40px。</p>
-</blockquote>
-<blockquote>
-<p><strong>minmax() 函数</strong><br>当网格容器的大小产生变化，还可以用minmax() 函数来限制单元格的大小，类似于fr：<br>grid-template-columns: 100px minmax(50px, 1fr);</p>
-</blockquote>
-<h3 id="3-在单元格之间创建间隙"><a href="#3-在单元格之间创建间隙" class="headerlink" title="3.在单元格之间创建间隙"></a>3.在单元格之间创建间隙</h3><p>Grid-column-gap: 10px;<br>Grid-row-gap:<br>Grid-gap: 10px 20px;<br>设置网格行和列之间的间隙</p>
-<p>Grid-gap 如果只有一个参数10px，则会将行和列的间隙都设置为10px，如果有两个参数10px 20px，则会将第一个参数设为行的间隙，第二个设为列的间隙。</p>
-<h2 id="二、对单元格进行设置"><a href="#二、对单元格进行设置" class="headerlink" title="二、对单元格进行设置"></a>二、对单元格进行设置</h2><h3 id="1-通过网格线改变单元格"><a href="#1-通过网格线改变单元格" class="headerlink" title="1.通过网格线改变单元格"></a>1.通过网格线改变单元格</h3><p>Grid-column: 1/3;<br>Grid-row:</p>
-<blockquote>
-<p>网格线：<br><img src="grid.png" alt="grid网格"></p>
-</blockquote>
-<p>参数为从开始线到结束线，举个栗子：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">#items&#123;</span><br><span class="line">grid-column: 1/3;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
-<p>表示id为items的网格横跨第一条列线到第三条列线，占据两个网格。</p>
-<h3 id="2-对网格中的项目进行对齐"><a href="#2-对网格中的项目进行对齐" class="headerlink" title="2.对网格中的项目进行对齐"></a>2.对网格中的项目进行对齐</h3><p>Justify-self: center;<br>Align-self: center;<br>Justify-self用于水平对齐，align-self用于垂直对齐。<br>默认情况下，此属性的值为stretch，这将使内容拉伸以填充单元格的整个宽度。此CSS Grid属性也接受其他值：<br>start：对齐单元格左侧，<br>center：对齐单元格中心，<br>end：对齐单元格右侧。</p>
-<blockquote>
-<p><strong>对网格容器中所有网格中的项目进行对齐（网格容器的属性）</strong><br>Justfy-items: center;        水平对齐<br>Align-items: stretch;        垂直对齐<br>可接受参数与上两项（网格项的对齐属性）完全相同。</p>
-</blockquote>
-<h3 id="3-css网格区域"><a href="#3-css网格区域" class="headerlink" title="3.css网格区域"></a>3.css网格区域</h3><p>grid-template-areas用来合并网格形成区域并且命名。<br>grid-template-areas:<br>  “header header header”<br>  “advert content content”<br>  “footer footer footer”;<br>上面的代码将前三个单元格合并为一个区域header，将底部的三个单元格合并为一个footer区域，并在中间行中生成两个区域; advert和content。</p>
-<blockquote>
-<p>. 表示空单元格</p>
-</blockquote>
-<p>Grid-area;<br>通过引用区域的名称可以将项目放入区域。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">#item1 &#123;grid-area：header; &#125;</span><br></pre></td></tr></table></figure></p>
-<p>另一种方式：<br>网格区域：水平线开始/垂直线开始/水平线结束/垂直线结束;<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">#item1 &#123;grid-area：1/1/2/4; &#125;</span><br></pre></td></tr></table></figure></p>
-<p>项目将使用第1行和第2行之间的行以及第1行和第4行之间的行。</p>
+                <p>&emsp;想必大家一定都遇到过下面这种情况:<br><br><img src="断网.jpg" alt=""><br>&emsp;没错，这只像素小恐龙和下面的字非常清晰地告诉你一个残酷的事实：<strong>断网了</strong>。。。<br>&emsp;但是有意思的是，作者前些天断网时，一时手欠点了一下<strong>空格键</strong>。。。<br>&emsp;然后。。。。<br><img src="开始.gif" alt=""><br>它跑起来了！<br><img src="吃惊.jpg" width="150px;" height="150px;"><br>&emsp;这竟然还是个躲避障碍物的小游戏，右上方还有历史最高分数和现在的分数，作者。。。理所当然地玩了起来(✪ω✪)<br><img src="整百.gif" alt=""><br>&emsp;然后我发现，这个小游戏，竟然还不简单。<br>&emsp;按空格键可以进行跳跃，同时按上箭头键也是可以的，按键的时间的长短决定小恐龙跳的高度，按下箭头键甚至还可以低头！分数越高小恐龙会逐渐的越跑越快，游戏难度也会增加。<br><img src="跳跃和低头.gif" alt=""><br>更有意思的是，当你达到700分时，还会转换成黑夜模式。（每700分黑夜白天都会发生变化）<br><img src="黑夜.gif" alt=""><br><img src="interesting.jpg" width="150px" height="150px"><br>&emsp;为了查明这条小恐龙的真相，作者专门百度了一番，然后发现，这条小恐龙诞生于2014年，是chrome的一个复活节彩蛋，名叫Dino，是chrome公司的几个大佬为了让用户在断网时不会感觉到无聊而创造的，这个小游戏目前已经风靡全世界（也只有作者这个菜鸡不知道而已），甚至还成为chrome公司的一种吉祥物。<br>&emsp;这些年来，chrome公司也对它进行了一系列的升级，甚至还开发了“街机模式”，在网址输入栏里输入chrome：// dino 即可进入，让用户们在联网情况下也可以玩游戏。<br>&emsp;有意思的是，chrome有个专门的网站，放这个小游戏：chromedino.com，在这个页面上，有人打出的历史最高分是18842（怕不是要玩到猝死），更狠的是，网上甚至还出现了dino小游戏的外挂和代码分析（这游戏竟然还有外挂！）这时候，有的读者就想问了：这些玩家还能更过分一点吗？？<br>能！<br>&emsp;YouTube上还有大佬发布了一段视频，展示了他如何用神经网络+遗传算法，让一个AI系统轻松玩到了两万多分。。。。。<br>&emsp;你们感受一下。。。<br><img src="ai.gif" alt=""><br>快到令人发指。。。<br><img src="高手.jpg" width="150px"><br>看来大佬都是从打游戏开始的，不说了，我去打游戏了。<br><img src="打游戏.jpg" width="150px"></p>
+<p>（对了，据说，大佬们设定这个游戏的持续时间大约是1700万年，与地球上霸王龙存活的时间相同，想要打通关的小伙伴还是赶紧洗洗睡吧<br> =￣ω￣=）</p>
+<p>百度资料来自于：<br>1.<a href="https://www.blog.google/products/chrome/chrome-dino/" target="_blank" rel="noopener">https://www.blog.google/products/chrome/chrome-dino/</a><br>2.<a href="https://blog.csdn.net/yH0VLDe8VG8ep9VGe/article/details/80237303" target="_blank" rel="noopener">https://blog.csdn.net/yH0VLDe8VG8ep9VGe/article/details/80237303</a><br>侵删</p>
 
             </div>
             <hr/>
@@ -469,7 +424,7 @@ Grid一、对网格容器进行设置1.将HTML元素化为网格容器display: g
                     <span class="reprint-tip">转载请注明: </span>
                     <a href="http://yoursite.com" class="b-link-green">Comingdawn</a>
                     <i class="fa fa-angle-right fa-lg fa-fw text-color"></i>
-                    <a href="/undefined/2019/CSS-Grid表格总结/" class="b-link-green">[CSS]Grid表格总结</a>
+                    <a href="/undefined/2019/Chrome中的小恐龙/" class="b-link-green">Chrome中的小恐龙</a>
                 </p>
             </div>
         </div>
@@ -488,8 +443,8 @@ Grid一、对网格容器进行设置1.将HTML元素化为网格容器display: g
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up">
-            <div class="article-badge left-badge text-color">上一篇</div>
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
+            <div class="article-badge left-badge text-color">本篇</div>
             <div class="card">
                 <a href="/undefined/2019/Chrome中的小恐龙/">
                     <div class="card-image">
@@ -503,9 +458,9 @@ Grid一、对网格容器进行设置1.将HTML元素化为网格容器display: g
                 <div class="card-content article-content">
                     <div class="summary">&emsp;想必大家一定都遇到过下面这种情况:&emsp;没错，这只像素小恐龙和下面的字非常清晰地告诉你一个残酷的事实：断网了。。。&emsp;但是有意思的是，作者前些天断网时，一时手欠点了一下空格键。。。&emsp;然后。。。。它跑起来了</div>
                     <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="fa fa-clock-o fa-fw icon-date"></i>2019-09-16
-                        </span>
+                            <span class="publish-date">
+                                <i class="fa fa-clock-o fa-fw icon-date"></i>2019-09-16
+                            </span>
                         <span class="publish-author">
                             
                             <i class="fa fa-user fa-fw"></i>
@@ -514,6 +469,7 @@ Grid一、对网格容器进行设置1.将HTML元素化为网格容器display: g
                         </span>
                     </div>
                 </div>
+
                 
             </div>
         </div>
@@ -522,20 +478,23 @@ Grid一、对网格容器进行设置1.将HTML元素化为网格容器display: g
         <div class="article col s12 m6" data-aos="fade-up">
             <div class="article-badge right-badge text-color">下一篇</div>
             <div class="card">
-                <a href="/undefined/2018/hello-world/">
+                <a href="/undefined/2019/CSS-Grid表格总结/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/12.jpg" class="responsive-img" alt="Hello World">
+                        <img src="/medias/featureimages/15.jpg" class="responsive-img" alt="[CSS]Grid表格总结">
                         
-                        <span class="card-title">Hello World</span>
+                        <span class="card-title">[CSS]Grid表格总结</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
-                    <div class="summary">Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hex</div>
+                    <div class="summary">Css网格平常用到的时候还是蛮多的，并且十分的灵活的，但是我不太熟悉它的使用，而且总是忘记，所以在此稍微的记一下。
+Grid一、对网格容器进行设置1.将HTML元素化为网格容器display: grid;
+
+你还可以将网格中的单元格也化成网</div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="fa fa-clock-o fa-fw icon-date"></i>2018-10-18
+                                <i class="fa fa-clock-o fa-fw icon-date"></i>2019-08-12
                             </span>
                         <span class="publish-author">
                             
